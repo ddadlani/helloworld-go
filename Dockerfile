@@ -3,12 +3,12 @@
 FROM golang
 
 # Copy the local package files to the container's workspace.
-ADD . /go/src/github.com/knative/docs/helloworld
+ADD . /go/src/github.com/ddadlani/helloworld-go
 
 # Build the helloworld command inside the container.
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
-RUN go install github.com/knative/docs/helloworld
+RUN go install github.com/ddadlani/helloworld-go
 
 # Run the helloworld command by default when the container starts.
 ENTRYPOINT /go/bin/helloworld

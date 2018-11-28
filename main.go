@@ -5,9 +5,11 @@ import (
 	"log"
 	"net/http"
 	"os"
-
-	"github.com/ddadlani/helloworld-go/target"
 )
+
+func SetTarget(target string) {
+	os.Setenv("TARGET", target)
+}
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	log.Print("Hello world received a request.")
@@ -28,7 +30,7 @@ func main() {
 		port = "8080"
 	}
 
-	target.SetTarget("Me")
+	SetTarget("Me")
 
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }

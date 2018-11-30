@@ -1,6 +1,0 @@
----
-applications:
-  - name: helloworld-go
-    buildpack: go-buildpack
-    env:
-      GOPACKAGENAME: main

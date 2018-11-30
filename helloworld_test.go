@@ -10,6 +10,6 @@ func TestHandler(t *testing.T) {
 	//SetTarget("test")
 	target := os.Getenv("TARGET")
 	if target != "test" {
-		t.Fail()
+		t.Error("target was not set correctly")
 	}
 }

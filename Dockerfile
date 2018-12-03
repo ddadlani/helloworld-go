@@ -11,7 +11,7 @@ ADD . /go/src/github.com/ddadlani/helloworld-go
 RUN go install github.com/ddadlani/helloworld-go
 
 # Run the helloworld command by default when the container starts.
-ENTRYPOINT /go/bin/helloworld
+ENTRYPOINT /go/bin/helloworld-go
 
 # Document that the service listens on port 8080.
 EXPOSE 8080

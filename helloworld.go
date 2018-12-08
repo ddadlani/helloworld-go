@@ -8,7 +8,7 @@ import (
 )
 
 func SetTarget(target string) {
-	//os.Setenv("TARGET", target)
+	os.Setenv("TARGET", target)
 }
 
 func Handler(w http.ResponseWriter, r *http.Request) {
@@ -30,7 +30,7 @@ func main() {
 		port = "8080"
 	}
 
-	SetTarget("World")
+	SetTarget("CF Day 2018!")
 
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }

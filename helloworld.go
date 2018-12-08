@@ -8,7 +8,8 @@ import (
 )
 
 func SetTarget(target string) {
-	os.Setenv("TARGET", target)
+	//os.Setenv("TARGET", target)
+	fmt.Println(target)
 }
 
 func Handler(w http.ResponseWriter, r *http.Request) {

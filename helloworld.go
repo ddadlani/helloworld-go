@@ -30,7 +30,7 @@ func main() {
 		port = "8080"
 	}
 
-	SetTarget("Seattle")
+	SetTarget("Seattle City")
 
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }

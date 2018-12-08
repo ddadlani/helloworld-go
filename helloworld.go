@@ -15,7 +15,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	log.Print("Hello world received a request.")
 	target := os.Getenv("TARGET")
 	if target == "" {
-		target = "CF Day"
+		target = "World"
 	}
 	fmt.Fprintf(w, "Hello there %s!\n", target)
 }
@@ -30,7 +30,7 @@ func main() {
 		port = "8080"
 	}
 
-	SetTarget("Wide World")
+	SetTarget("CF Day")
 
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }

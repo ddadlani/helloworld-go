@@ -30,7 +30,7 @@ func main() {
 		port = "8080"
 	}
 
-	SetTarget("CF Day NA 2018!")
+	SetTarget("World")
 
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }
